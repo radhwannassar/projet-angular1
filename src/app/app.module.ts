@@ -9,7 +9,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { AddComponent } from './add/add.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ModifyComponent } from './modify/modify.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +19,6 @@ import { ModifyComponent } from './modify/modify.component';
     LoginComponent,
     GalleryComponent,
     AddComponent,
-    ModifyComponent
   ],
   imports: [
     BrowserModule,
