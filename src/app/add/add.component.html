@@ -1,0 +1,43 @@
+<div class="jumbotron">
+  <div class="container">
+<form #myForm="ngForm">
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="espece">Espece</label>
+      <input type="text" class="form-control" id="espece" [(ngModel)]="animal.espece" #espece="ngModel" name="espece"
+        required minlength="3">
+      <div *ngIf="espece.touched && espece.errors">
+        <div class="alert alert-danger" *ngIf="espece.errors.required">entrer l'espece.</div>
+        <div class="alert alert-danger" *ngIf="espece.errors.minlength">espece doit au moins avoir 3 charactéres</div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="race">Race</label>
+      <input type="text" class="form-control" id="race" [(ngModel)]="animal.race" #race="ngModel" name="race"
+        required minlength="3">
+      <div *ngIf="espece.touched && espece.errors">
+        <div class="alert alert-danger" *ngIf="race.errors.required">entrer race.</div>
+        <div class="alert alert-danger" *ngIf="race.errors.minlength">espece doit au moins avoir 3 charactéres</div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="espece">age</label>
+      <input type="text" class="form-control" id="age" [(ngModel)]="animal.age" #age="ngModel" name="age"
+        required>
+      <div *ngIf="espece.touched && espece.errors">
+        <div class="alert alert-danger" *ngIf="espece.errors.required">entrer l'age .</div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="espece">poids</label>
+      <input type="text" class="form-control" id="poids" [(ngModel)]="animal.poids" #poids="ngModel" name="poids"
+        required>
+      <div *ngIf="espece.touched && espece.errors">
+        <div class="alert alert-danger" *ngIf="espece.errors.required">entrer le poids.</div>
+      </div>
+    </div>
+    </div>
+</form>
+<button class="btn btn-dark" (click)="add()">ajouter</button>
+</div>
+</div>

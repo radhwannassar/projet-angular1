@@ -1,0 +1,17 @@
+
+<div class="container row" style="margin-left:200px;">
+ 
+<div class="col-3 text-center" *ngFor="let a of animals">
+<div class="card" style="width: 18rem;">
+    <img src="../../assets/12.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">espece {{a.race}}</h5>
+      <h5 class="card-title"> race {{a.espece}}</h5>
+      <h5 class="card-title">  l'age{{a.age}}</h5>
+      <h5 class="card-title"> poids {{a.poids}}</h5>
+      <p class="card-text">.</p>
+    </div>
+    <button class="btn btn-dark" (click)="delete(a.id)">supprime</button>
+  </div>
+</div>
+</div>
